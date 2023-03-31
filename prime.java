@@ -50,10 +50,10 @@ pipeline {
     stages {
         stage("Take Parameters") {
             steps {
-                input message: 'Enter parameters', parameters: [
-                    string(name: 'PARAMETER_1', defaultValue: '', description: 'Enter the first parameter'),
-                    string(name: 'PARAMETER_2', defaultValue: '', description: 'Enter the second parameter'),
-                    choice(name: 'CHOICE_PARAMETER', choices: ['option1', 'option2'], description: 'Choose an option')
+                input message: "Enter parameters", parameters: [
+                    string(name: "PARAMETER_1", defaultValue: '', description: "nter the first parameter"),
+                    string(name: "PARAMETER_2", defaultValue: '', description: "Enter the second parameter"),
+                    choice(name: "CHOICE_PARAMETER", choices: ["option1", "option2"], description: "Choose an option")
                 ]
             }
         }
