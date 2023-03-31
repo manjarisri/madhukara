@@ -30,6 +30,7 @@ pipeline {
          stage("executing"){
            steps{
             echo "number:${params.number}"
+               number=$params.number
            
          }
         }
