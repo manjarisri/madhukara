@@ -10,10 +10,9 @@
 pipeline {
     agent any
     stages {
-        stage("Take Parameters") {
-            stage("accessing git repo"){
-      steps{
-     git branch: 'main', url: "https://github.com/manjarisri/madhukara"
+      stage("accessing git repo"){
+              steps{
+                git branch: 'main', url: "https://github.com/manjarisri/madhukara"
     }
     }
     stage("compiling"){
@@ -21,6 +20,7 @@ pipeline {
       sh "javac prime.java"
     }
     }
+           stage("Take Parameters") {
             steps {
                 input message: "Enter parameter", parameters: [
                     string(name: "number", defaultValue: '3', description: "enter the number")
