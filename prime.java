@@ -45,12 +45,24 @@
 //     }   
 
 
-
-properties([
-  	parameters([
-  		string(name: 'mybranch', defaultValue: 'undefined')
-  	])
-  ])
-  println "Hello from the shebang line"
-  println "####Printing parameter:"
-  echo "mybranch = ${mybranch}"
+pipeline {
+    agent any
+    stages {
+        stage('Take Parameters') {
+            steps {
+                input message: 'Enter parameters', parameters: [
+                    string(name: 'PARAMETER_1', defaultValue: '', description: 'Enter the first parameter'),
+                    string(name: 'PARAMETER_2', defaultValue: '', description: 'Enter the second parameter'),
+                    choice(name: 'CHOICE_PARAMETER', choices: ['option1', 'option2'], description: 'Choose an option')
+                ]
+            }
+        }
+        stage('Build') {
+            steps {
+                echo "Parameter 1: ${params.PARAMETER_1}"
+                echo "Parameter 2: ${params.PARAMETER_2}"
+                echo "Choice parameter: ${params.CHOICE_PARAMETER}"
+            }
+        }
+    }
+}
