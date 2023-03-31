@@ -29,6 +29,7 @@ pipeline {
         }
          stage("executing"){
       steps{
+       echo "number: ${params.number}"
       sh "java prime"
     }
     }
