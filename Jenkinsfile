@@ -3,7 +3,7 @@ pipeline{
   stages{
     stage("accessing git repo"){
       steps{
-     git branch: 'main', url: "https://github.com:manjarisri/madhukara.git"
+     git branch: 'main', url: "https://github.com/manjarisri/madhukara"
     }
     }
     stage("compiling"){
