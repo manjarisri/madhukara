@@ -32,11 +32,11 @@ pipeline {
             echo "number:${params.number}"
            
          }
-             stage("build"){
+        }
+        stage("build"){
                  steps{
                   sh "java prime"
                  }
              }
-        }
     }
 }
