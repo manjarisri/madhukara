@@ -48,7 +48,7 @@
 pipeline {
     agent any
     stages {
-        stage('Take Parameters') {
+        stage("Take Parameters") {
             steps {
                 input message: 'Enter parameters', parameters: [
                     string(name: 'PARAMETER_1', defaultValue: '', description: 'Enter the first parameter'),
@@ -57,7 +57,7 @@ pipeline {
                 ]
             }
         }
-        stage('Build') {
+        stage("Build") {
             steps {
                 echo "Parameter 1: ${params.PARAMETER_1}"
                 echo "Parameter 2: ${params.PARAMETER_2}"
