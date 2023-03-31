@@ -4,6 +4,7 @@
             Scanner s = new Scanner(System.in);
             System.out.print("Enter a number : ");
            //int n = s.nextInt();
+           int n;
             if (isPrime(n)) {
                 System.out.println(n + " is a prime number");
             } else {
