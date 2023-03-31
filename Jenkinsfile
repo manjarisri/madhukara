@@ -23,7 +23,7 @@ pipeline {
            stage("Take Parameters") {
             steps {
                 input message: "Enter parameter", parameters: [
-                    string(name: "number", defaultValue: '3', description: "enter the number")
+                    string(name: "number", defaultValue: '3', description: "enter the num")
                 ]
             }
         }
