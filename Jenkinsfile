@@ -28,10 +28,15 @@ pipeline {
             }
         }
          stage("executing"){
-      steps{
-       echo "number: ${params.number}"
-      sh "java prime"
-    }
-    }
+           steps{
+            echo "number:${params.number}"
+           
+         }
+             stage("build"){
+                 steps{
+                  sh "java prime"
+                 }
+             }
+        }
     }
 }
