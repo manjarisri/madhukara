@@ -9,7 +9,6 @@ pipeline {
                 sh 'mvn clean package'
             }
         }
-    stages {
         stage('BTest') {
             steps {
                 sh 'mvn test'
@@ -17,5 +16,5 @@ pipeline {
         }
         }
     }
-    }
+    
 
