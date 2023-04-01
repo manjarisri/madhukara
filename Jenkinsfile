@@ -30,7 +30,7 @@ pipeline {
       }
       failure{
          mail to: "manjari.srivastav@knoldus.com",
-         subject: "Build failed!!",
+         subject: "Build failed!",
          body: "your build failed"
       }
       }
