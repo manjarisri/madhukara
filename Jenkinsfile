@@ -24,13 +24,13 @@ pipeline {
     }
     post{
       success{
-         mail to: "manjari.srivastav@knoldus.com"
-         subject: "successful Build!"
+         mail to: "manjari.srivastav@knoldus.com",
+         subject: "successful Build!",
          body: "success"
       }
       failure{
-         mail to: "manjari.srivastav@knoldus.com"
-         subject: "Build failed!!"
+         mail to: "manjari.srivastav@knoldus.com",
+         subject: "Build failed!!",
          body: "your build failed"
       }
       }
