@@ -7,7 +7,7 @@ pipeline {
                 sh 'mvn test'
             }
         }
-    stage('Deploy to Tomcat') {
+     stage('Deploy to Tomcat') {
             steps {
                 sh 'cp target/myapp.war /path/to/tomcat/webapps/'
                 sh '/path/to/tomcat/bin/shutdown.sh'
