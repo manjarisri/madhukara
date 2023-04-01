@@ -22,17 +22,17 @@ pipeline {
                 }
         }
     }
-    post{
-      success{
-         mail to: "manjarisrivastav04@gmail.com"
-         subject: "successful Build!"
-         body: "success"
-      }
-      failure{
-         mail to: "manjarisrivastav04@gmail.com"
-         subject: "Build failed!!"
-         body: "your build failed"
-      }
-      }
+//     post{
+//       success{
+//          mail to: "manjarisrivastav04@gmail.com"
+//          subject: "successful Build!"
+//          body: "success"
+//       }
+//       failure{
+//          mail to: "manjarisrivastav04@gmail.com"
+//          subject: "Build failed!!"
+//          body: "your build failed"
+//       }
+//       }
 }
 
